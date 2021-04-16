@@ -1,27 +1,50 @@
+.Dictionary {
+  display: block;
+  margin: 0 auto;
+}
+
+.row {
+  max-width: 50%;
+  display: inlinek;
+  margin: 0 auto;
+}
+
 .Dictionary-form {
   margin-bottom: 20px;
 }
 
-.searchButton {
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #ff887c;
+}
+
+.Dictionary input {
+  border: 1px solid #ff887c;
+  border-radius: 5px;
+  color: #ff887c;
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.Button input {
+  border: 2px solid #ff887c;
+  border-radius: 5px;
+  color: #ffff;
+  background: #ff887c;
+}
+
+.Button input:hover {
   border: 2px solid #ff887c;
   border-radius: 5px;
   color: #ff887c;
   background: transparent;
   margin: 0;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 7px;
-  text-decoration: none;
-  transition: all 200ms ease;
-}
-
-.searchButton :hover {
-  border: 2px solid #ffff;
-  border-radius: 5px;
-  color: #e0c3fc;
-  background: #ffffff;
-  margin: 0;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 22px;
   padding: 7px;
   text-decoration: none;

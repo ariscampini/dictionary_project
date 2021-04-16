@@ -9,7 +9,7 @@ function App() {
         <header className="App-header">
           <img src={image} className="App-image img-fluid" alt="logo"/>  
         </header>
-          <Dictionary/>
+          <Dictionary defaultKeyword="Dictionary"/>
         <footer className="text-center">
           This project was coded by Arianna Scampini and is {" "} 
           <a className= "footer" rel="noreferrer"  href="https://github.com/ariscampini/react-weatherapp-finalproject" 

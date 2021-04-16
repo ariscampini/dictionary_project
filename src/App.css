@@ -1,21 +1,27 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  font-size: 12px;
+}
+
 .App-image {
   max-width: 200px;
   display: block;
   margin: 30px auto;
 }
 
-.App {
-  max-width: 800px;
-  margin: 0 auto;
-
-  max-width: 100%;
-  display: block;
-  margin: auto;
-}
-
 .App footer {
   font-size: 11px;
   max-width: 80%;
   display: block;
+  padding: 15px;
   margin: auto;
+}
+
+a {
+  color: #ff887c;
 }
