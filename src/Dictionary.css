@@ -1,0 +1,28 @@
+.Dictionary-form {
+  margin-bottom: 20px;
+}
+
+.searchButton {
+  border: 2px solid #ffff;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #e14a3b;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 7px;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+
+.searchButton :hover {
+  border: 2px solid #ffff;
+  border-radius: 5px;
+  color: #e0c3fc;
+  background: #ffffff;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 7px;
+  text-decoration: none;
+}
