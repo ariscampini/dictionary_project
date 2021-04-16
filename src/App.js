@@ -1,5 +1,5 @@
 import Dictionary from "./Dictionary"
-import image from './image.png';
+import image from './logo.png';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <img src={image} className="App-image img-fluid" alt="cute monster"/>  
+          <img src={image} className="App-image img-fluid" alt="logo"/>  
         </header>
           <Dictionary/>
         <footer className="text-center">
