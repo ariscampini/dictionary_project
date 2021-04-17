@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 import './Dictionary.css';
 
 
@@ -9,16 +10,24 @@ export default function Dictionary (props){
     let [keyword, setKeyword] = useState (props.defaultKeyword);
     let [results, setResults] = useState (null);
     let [loaded, setLoaded] = useState(false);
+    let [photos, setPhotos] = useState (null);
 
     function handleResponse (response){
-        console.log(response.data[0].meanings[0].definitions[0].definition);
+        
         setResults (response.data[0]);
+    }
+
+    function handlePexelsResponse (response) {
+        setPhotos (response.data.photos);
     }
     
     function search () {
         let apiUrl =`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`
         axios.get(apiUrl).then(handleResponse);
-        
+
+        let pexelsApiKey="563492ad6f91700001000001fdd29f0808df42bd90c33f42e128fa89";
+        let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=4`;
+        axios.get(pexelsApiUrl, {headers: {"Authorization" : `Bearer ${pexelsApiKey}`}}).then (handlePexelsResponse);
     }
 
     function handleSubmit (event){
@@ -42,7 +51,7 @@ export default function Dictionary (props){
 
             <form  className="Dictionary-form" onSubmit={handleSubmit}>
             
-            <div className="row">
+            <div className="row search">
                        
                 <div className="col-11">
                     <input 
@@ -68,7 +77,8 @@ export default function Dictionary (props){
         
         <Results results={results}/>
         <hr />
-
+        <Photos photos={photos}/>
+        <hr />
         </div>
 
     );
